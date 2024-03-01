@@ -15,7 +15,9 @@ class Database {
   }
 
   init() {
-    this.connection = new Sequelize("postgresql://postgres:B26FABE41gB4Ag2Fa-bGb-4EFEB65gG4@viaduct.proxy.rlwy.net:23022/railway")
+    this.connection = new Sequelize(
+      'postgresql://postgres:6F646D1cCbC55eG431aA5gfB*44Df4G2@monorail.proxy.rlwy.net:31444/railway'
+    )
     models
       .map((model) => model.init(this.connection))
       .map(
@@ -25,7 +27,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose.connect(
-      'mongodb://mongo:Hc1EA54FBbGd5fbh65c4DfcDEe6CfB44@monorail.proxy.rlwy.net:44365',
+      'mongodb://mongo:dgFFh5FBhDCFA5bhc6cH5F1HFH1b5AbF@monorail.proxy.rlwy.net:21017',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,

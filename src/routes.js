@@ -11,6 +11,10 @@ const upload = multer(multerConfig)
 
 const routes = new Router()
 
+routes.get('/', (request, response) => {
+  return response.json({ messge: 'My First API' })
+})
+
 routes.post('/users', UserController.store)
 
 routes.post('/sessions', SessionController.store)
